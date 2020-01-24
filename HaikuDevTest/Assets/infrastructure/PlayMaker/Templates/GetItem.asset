@@ -34,7 +34,7 @@ MonoBehaviour:
       - fsmEvent:
           name: tapped
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: Tap Blocker On
         linkStyle: 0
         linkConstraint: 0
@@ -333,8 +333,8 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 675
-        y: 259.1875
+        x: 993.6719
+        y: 265.77344
         width: 133
         height: 32
       isBreakpoint: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
     events:
     - name: tapped
       isSystemEvent: 0
-      isGlobal: 1
+      isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0

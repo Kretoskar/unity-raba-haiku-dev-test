@@ -10803,9 +10803,7 @@ MonoBehaviour:
   _itemAnimationPrefab: {fileID: 1442321062195580, guid: b5bb322934a4d498398427c54eae9aeb,
     type: 2}
   _tapBlocker: {fileID: 1205852831416404}
-  _hintManager: {fileID: 0}
   _hintBuyFSM: {fileID: 0}
-  _conversationCanvas: {fileID: 0}
   _getItemSoundEffect: {fileID: 8300000, guid: 755d411dc9c4d450a9df462d96491f2a, type: 3}
 --- !u!114 &114786647567490572
 MonoBehaviour:

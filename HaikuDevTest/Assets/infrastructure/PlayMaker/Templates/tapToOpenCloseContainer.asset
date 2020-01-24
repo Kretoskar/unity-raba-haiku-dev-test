@@ -34,7 +34,7 @@ MonoBehaviour:
       - fsmEvent:
           name: tapped
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: WaitFrame1
         linkStyle: 0
         linkConstraint: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
       - fsmEvent:
           name: tapped
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: WaitFrame2
         linkStyle: 0
         linkConstraint: 0
@@ -656,7 +656,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: tapped
       isSystemEvent: 0
-      isGlobal: 1
+      isGlobal: 0
     globalTransitions: []
     variables:
       floatVariables: []

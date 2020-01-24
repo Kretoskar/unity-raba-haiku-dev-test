@@ -41,3 +41,4 @@ MonoBehaviour:
   - e9TutorialGrabber
   - TutorialItemSelected
   - TutorialItemScaledBackDown
+  - stencilCollected

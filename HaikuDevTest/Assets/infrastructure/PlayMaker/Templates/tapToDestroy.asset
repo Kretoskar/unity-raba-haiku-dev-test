@@ -34,7 +34,7 @@ MonoBehaviour:
       - fsmEvent:
           name: tapped
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: Wait 1 Frame
         linkStyle: 0
         linkConstraint: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
     events:
     - name: tapped
       isSystemEvent: 0
-      isGlobal: 1
+      isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
