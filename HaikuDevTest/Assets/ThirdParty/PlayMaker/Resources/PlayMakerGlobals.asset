@@ -44,3 +44,8 @@ MonoBehaviour:
   - stencilCollected
   - use
   - tubeAnimationFinished
+  - blue
+  - green
+  - red
+  - yellow
+  - arrowTapped
