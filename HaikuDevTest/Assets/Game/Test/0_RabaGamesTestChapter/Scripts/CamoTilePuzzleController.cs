@@ -77,12 +77,19 @@ namespace Game.MudRoom.Puzzle
             SpawnPuzzleTiles();
         }
 
+        /// <summary>
+        /// Randomize puzzle positions
+        /// </summary>
         public override void ResetPuzzle()
         {
             base.ResetPuzzle();
             MixPuzzleTiles();
         }
 
+        /// <summary>
+        /// Set puzzles to correct positions 
+        /// and send won event to won sfm.
+        /// </summary>
         public override void Skip()
         {
             SolveThePuzzle();
