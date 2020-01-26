@@ -1732,7 +1732,7 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             typeName: UnityEngine.Sprite
-            value: {fileID: 21300000, guid: 82157a5bf2ea643178ff02ecfc65285b, type: 3}
+            value: {fileID: 21300000, guid: a8a080c9cbfe8644dbbfb25b2795efd4, type: 3}
           MaterialParameter:
             useVariable: 0
             name: 
@@ -9121,7 +9121,7 @@ MonoBehaviour:
         x: 210.91406
         y: 166.125
         width: 144
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -9131,14 +9131,6 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: Wait 1 frame 2
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: 
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -9192,7 +9184,7 @@ MonoBehaviour:
         x: 384.02344
         y: 165.46875
         width: 130
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -9202,14 +9194,6 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: GetBlueArrow
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: 
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -9589,7 +9573,7 @@ MonoBehaviour:
         x: 213.53906
         y: 231.46875
         width: 144
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -9599,14 +9583,6 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: Wait 1 frame 3
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: 
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -9660,7 +9636,7 @@ MonoBehaviour:
         x: 386.64844
         y: 230.8125
         width: 130
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -9670,14 +9646,6 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: GetGreenArrow
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: 
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -10057,7 +10025,7 @@ MonoBehaviour:
         x: 212.09375
         y: 295.375
         width: 144
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -10067,14 +10035,6 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: Wait 1 frame 4
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: 
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -10128,7 +10088,7 @@ MonoBehaviour:
         x: 389.32812
         y: 293.6875
         width: 130
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -10138,14 +10098,6 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: GetYellowArrow
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: 
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: 
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -23936,7 +23888,7 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             typeName: UnityEngine.Sprite
-            value: {fileID: 21300000, guid: 82157a5bf2ea643178ff02ecfc65285b, type: 3}
+            value: {fileID: 21300000, guid: a8a080c9cbfe8644dbbfb25b2795efd4, type: 3}
           MaterialParameter:
             useVariable: 0
             name: 
@@ -35507,7 +35459,7 @@ MonoBehaviour:
           name: focused
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 1
+        toState: Finished
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -35561,7 +35513,7 @@ MonoBehaviour:
         - isFocused
         paramDataPos: 0000000000000000
         paramByteDataSize: 0000000000000000
-    - name: State 1
+    - name: Finished
       description: 
       colorIndex: 0
       position:
@@ -38862,7 +38814,7 @@ MonoBehaviour:
           name: focused
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 1
+        toState: Finished
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -38916,7 +38868,7 @@ MonoBehaviour:
         - isFocused
         paramDataPos: 0000000000000000
         paramByteDataSize: 0000000000000000
-    - name: State 1
+    - name: Finished
       description: 
       colorIndex: 0
       position:
@@ -43812,7 +43764,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 000000
+        actionIsOpen: 000100
         actionStartIndex: 000000000300000005000000
         actionHashCodes: 603dd9055ac8520466287802
         unityObjectParams: []
@@ -43908,7 +43860,7 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             typeName: UnityEngine.Sprite
-            value: {fileID: 21300000, guid: 82157a5bf2ea643178ff02ecfc65285b, type: 3}
+            value: {fileID: 21300000, guid: a8a080c9cbfe8644dbbfb25b2795efd4, type: 3}
           MaterialParameter:
             useVariable: 0
             name: 
