@@ -94,7 +94,7 @@ MonoBehaviour:
       - fsmEvent:
           name: won
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: colliders off
         linkStyle: 0
         linkConstraint: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: won
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables: []

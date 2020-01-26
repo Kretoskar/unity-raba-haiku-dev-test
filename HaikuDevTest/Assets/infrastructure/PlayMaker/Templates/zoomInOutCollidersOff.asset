@@ -1892,7 +1892,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: won
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: deactivate
