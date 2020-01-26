@@ -273,7 +273,7 @@ namespace HutongGames.PlayMakerEditor
         {
             if (Initialized && fsmEditor != null)
             {
-                fsmEditor.Update();
+            //    fsmEditor.Update();
             }
         }
 
