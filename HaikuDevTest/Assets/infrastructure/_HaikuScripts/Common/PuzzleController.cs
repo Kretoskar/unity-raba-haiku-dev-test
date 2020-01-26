@@ -34,7 +34,7 @@ public abstract class PuzzleController : MonoBehaviour, IPuzzleHandler {
 
 		//-- Sending won event
 		if (_wonEventFsm != null) {
-			_wonEventFsm.SendEvent ("won");
+            _wonEventFsm.SendEvent("won");
 		}
 
 		Debug.Log ("Puzzle Won");
