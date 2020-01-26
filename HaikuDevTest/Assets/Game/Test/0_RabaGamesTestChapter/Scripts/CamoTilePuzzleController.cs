@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -75,6 +76,31 @@ namespace Game.MudRoom.Puzzle
             SpawnPuzzleTiles();
         }
 
+        public override void ResetPuzzle()
+        {
+            base.ResetPuzzle();
+            MixPuzzleTiles();
+        }
+
+        private void MixPuzzleTiles() //Note: MixTiles() and SpawnPuzzleTiles() look similar, but I made it two seperate methods for readability
+        {
+            _availablePuzzleTiles = new List<PuzzleTile>(_allPuzzleTiles);
+            for(int i = 0; i < 24; i++)
+            {
+                //Select a random tile
+                int tileIndex = UnityEngine.Random.Range(0, _availablePuzzleTiles.Count);
+                PuzzleTile puzzle = _availablePuzzleTiles[tileIndex];
+
+                //Move it to position corresponding to 'i'
+                puzzle.transform.localPosition = new Vector2(_upperLeftCornerPuzzlePosition.x + (i % _widthInTiles) * _tileEdgeLength,
+                    _upperLeftCornerPuzzlePosition.y - (Mathf.Floor(i / _widthInTiles) * _tileEdgeLength));
+                puzzle.ID = i;
+
+                //Remove this tile from available tiles
+                _availablePuzzleTiles.RemoveAt(tileIndex);
+            }
+        }
+
         /// <summary>
         /// Spawn puzzle tiles in random order
         /// </summary>
@@ -103,7 +129,9 @@ namespace Game.MudRoom.Puzzle
             puzzle.transform.localPosition = new Vector2(_upperLeftCornerPuzzlePosition.x + (index % _widthInTiles) * _tileEdgeLength,
                 _upperLeftCornerPuzzlePosition.y - (Mathf.Floor(index / _widthInTiles) * _tileEdgeLength));
 
+            //Add this tile to all tiles list
             _allPuzzleTiles.Add(puzzle);
+            //Remove this tile from available tiles
             _availablePuzzleTiles.RemoveAt(tileIndex);
         }
     }
