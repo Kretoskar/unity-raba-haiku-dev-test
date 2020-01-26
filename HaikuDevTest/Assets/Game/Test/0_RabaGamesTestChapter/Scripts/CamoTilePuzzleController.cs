@@ -21,11 +21,42 @@ namespace Game.MudRoom.Puzzle
 
         //Again, x an y would be ints if it wasn't for incorrect 'pixels per unit'
         private Vector2 _upperLeftCornerPuzzlePosition = new Vector3(-6.375f, 4.2f);
-        private List<GameObject> _puzzles = new List<GameObject>();
+        private List<PuzzleTile> _allPuzzleTiles = new List<PuzzleTile>();
+
+        /// <summary>
+        /// Tile highlighted by the user
+        /// </summary>
+        public PuzzleTile HighlightedTile { get; set; }
+
+        /// <summary>
+        /// Returns true if there is a highlihted tile already
+        /// </summary>
+        public bool ShouldSwap 
+        {
+            get
+            {
+                return HighlightedTile != null;
+            }
+        }
 
         private void Start()
         {
+            HighlightedTile = null;
             Activate();
+        }
+
+        public void CheckForWin()
+        {
+            bool win = true;
+            foreach(var tile in _allPuzzleTiles)
+            {
+                if (!tile.IsTileInCorrectPosition)
+                    win = false;
+            }
+            if(win)
+            {
+                Win();
+            }
         }
 
         public override void Activate()
@@ -48,10 +79,13 @@ namespace Game.MudRoom.Puzzle
             int tileIndex = UnityEngine.Random.Range(0, _availablePuzzleTiles.Count);
             PuzzleTile puzzle = Instantiate(_availablePuzzleTiles[tileIndex], _tilesParent);
 
+            //ID corresponds to the puzzle position
             puzzle.ID = index;
+            puzzle.Controller = this;
             puzzle.transform.localPosition = new Vector2(_upperLeftCornerPuzzlePosition.x + (index % _widthInTiles) * _tileEdgeLength,
                 _upperLeftCornerPuzzlePosition.y - (Mathf.Floor(index / _widthInTiles) * _tileEdgeLength));
 
+            _allPuzzleTiles.Add(puzzle);
             _availablePuzzleTiles.RemoveAt(tileIndex);
         }
     }
