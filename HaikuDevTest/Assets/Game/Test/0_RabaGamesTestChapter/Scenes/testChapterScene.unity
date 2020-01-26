@@ -12742,6 +12742,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _puzzleUI: {fileID: 2146253477}
   _wonEventFsm: {fileID: 0}
+  _availablePuzzleTiles:
+  - {fileID: 114082919601358520, guid: bd986f54010b8484caede5ee62e3eabe, type: 2}
+  - {fileID: 114175386324318590, guid: cb73925f4bfd11e42a2f1737e395ac99, type: 2}
+  - {fileID: 114606584071453870, guid: e4ef6fb83f663894ba9c356ee5fb49a4, type: 2}
+  - {fileID: 114540287089161196, guid: f4a6046faf3d54948975274f40a350df, type: 2}
+  - {fileID: 114979322798998936, guid: 15b9bc93db33e004695035fcdb4892da, type: 2}
+  - {fileID: 114146996822771434, guid: 0ec711033e5e1e041be8d0da5d59087d, type: 2}
+  - {fileID: 114902833498647720, guid: 7d60105c886e30944b389926c5371a96, type: 2}
+  - {fileID: 114933886302664002, guid: 01a942a1bb1344c4e88439d5a5ec71e9, type: 2}
+  - {fileID: 114092249422832416, guid: 880af5072c64270479b81bfe4aaf73c9, type: 2}
+  - {fileID: 114255660154976546, guid: 5dde88ddd12753949a68a582817eb140, type: 2}
+  - {fileID: 114947345140095582, guid: a260bf3bbaee50a4a822572a23ac414d, type: 2}
+  - {fileID: 114121764830185546, guid: bf936551245de3240b3dc5d5abc25e6a, type: 2}
+  - {fileID: 114486501142155328, guid: e24497eaef746304d9c30963cec0596e, type: 2}
+  - {fileID: 114534372022592304, guid: d3d9403e893dc514f8c27a3b263e7c08, type: 2}
+  - {fileID: 114195404080807324, guid: a7be33ff84985b84fa49bff75685c50f, type: 2}
+  - {fileID: 114031880286866840, guid: b1a0e0e08c0649943b145edd4f19be23, type: 2}
+  - {fileID: 114063159423695090, guid: 4e966d7b50eb7f24aa57cccc372886da, type: 2}
+  - {fileID: 114181044393189516, guid: 691a5dffa70c34a4f92e178f2694ea22, type: 2}
+  - {fileID: 114697167070034914, guid: 38fc1cba666ceda448fad05b2c57d084, type: 2}
+  - {fileID: 114405380101229238, guid: 4547ad44f302072488c7f97af3a973e0, type: 2}
+  - {fileID: 114613889039380860, guid: d230011f58189a1489822e7f506f584e, type: 2}
+  - {fileID: 114302320309772456, guid: 7c0ceee4d669b1f479d626e8b604a25b, type: 2}
+  - {fileID: 114745992412965542, guid: 1e08a449c21082e44b0b8796ca5ac60c, type: 2}
+  - {fileID: 114348772910142046, guid: 94f3900b281579b47ba0a60259b4a56f, type: 2}
+  _tilesParent: {fileID: 253485532}
 --- !u!1 &405108763
 GameObject:
   m_ObjectHideFlags: 0
@@ -30537,7 +30563,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046105299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 17467882}
