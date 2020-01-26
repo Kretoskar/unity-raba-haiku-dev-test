@@ -20,6 +20,7 @@ namespace Game.MudRoom.Puzzle
         [SerializeField]
         private Transform _tilesParent = null;
 
+        private int _puzzleCount = 24;
         //Again, x an y would be ints if it wasn't for incorrect 'pixels per unit'
         private Vector2 _upperLeftCornerPuzzlePosition = new Vector3(-6.375f, 4.2f);
         private List<PuzzleTile> _allPuzzleTiles = new List<PuzzleTile>();
@@ -82,10 +83,38 @@ namespace Game.MudRoom.Puzzle
             MixPuzzleTiles();
         }
 
+        public override void Skip()
+        {
+            SolveThePuzzle();
+            base.Skip();
+        }
+
+        /// <summary>
+        /// Set all tiles to correct position
+        /// </summary>
+        private void SolveThePuzzle()
+        {
+            for(int i = 0; i < _puzzleCount; i++)
+            {
+                foreach(var tile in _allPuzzleTiles)
+                {
+                    if(tile.CorrectID == i)
+                    {
+                        tile.transform.localPosition = new Vector2(_upperLeftCornerPuzzlePosition.x + (i % _widthInTiles) * _tileEdgeLength,
+                            _upperLeftCornerPuzzlePosition.y - (Mathf.Floor(i / _widthInTiles) * _tileEdgeLength));
+                        tile.ID = i;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Randomize puzzle tiles positions
+        /// </summary>
         private void MixPuzzleTiles() //Note: MixTiles() and SpawnPuzzleTiles() look similar, but I made it two seperate methods for readability
         {
             _availablePuzzleTiles = new List<PuzzleTile>(_allPuzzleTiles);
-            for(int i = 0; i < 24; i++)
+            for(int i = 0; i < _puzzleCount; i++)
             {
                 //Select a random tile
                 int tileIndex = UnityEngine.Random.Range(0, _availablePuzzleTiles.Count);
@@ -106,7 +135,7 @@ namespace Game.MudRoom.Puzzle
         /// </summary>
         private void SpawnPuzzleTiles()
         {
-            for (int i = 0; i < 24; i++)
+            for (int i = 0; i < _puzzleCount; i++)
             {
                 SpawnSingleTile(i);
             }

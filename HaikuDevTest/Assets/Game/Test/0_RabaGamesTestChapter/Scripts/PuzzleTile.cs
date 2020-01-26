@@ -52,7 +52,7 @@ namespace Game.MudRoom.Puzzle
 		public int CorrectID
 		{
 			get { return _correctID; }
-			set { _correctID = value; }
+			private set { _correctID = value; }
 		}
 
 		/// <summary>
