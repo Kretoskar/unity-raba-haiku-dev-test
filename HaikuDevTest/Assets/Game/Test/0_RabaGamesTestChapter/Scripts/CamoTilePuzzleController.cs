@@ -39,12 +39,19 @@ namespace Game.MudRoom.Puzzle
             }
         }
 
+        /// <summary>
+        /// Activate the puzzle UI
+        /// </summary>
         private void Start()
         {
             HighlightedTile = null;
             Activate();
         }
 
+        /// <summary>
+        /// Call base class's win method if all the 
+        /// puzzle tiles are in correct position.
+        /// </summary>
         public void CheckForWin()
         {
             bool win = true;
@@ -59,12 +66,18 @@ namespace Game.MudRoom.Puzzle
             }
         }
 
+        /// <summary>
+        /// Activate the UI and set up puzzle tiles
+        /// </summary>
         public override void Activate()
         {
             base.Activate();
             SpawnPuzzleTiles();
         }
 
+        /// <summary>
+        /// Spawn puzzle tiles in random order
+        /// </summary>
         private void SpawnPuzzleTiles()
         {
             for (int i = 0; i < 24; i++)
@@ -73,6 +86,11 @@ namespace Game.MudRoom.Puzzle
             }
         }
 
+        /// <summary>
+        /// Instantiate a puzzle tile and set it up.
+        /// Position is set depending on the index.
+        /// </summary>
+        /// <param name="index">current tile index</param>
         private void SpawnSingleTile(int index)
         {
             //Select a random tile so that the puzzle is never the same each game

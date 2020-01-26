@@ -55,22 +55,18 @@ namespace Game.MudRoom.Puzzle
 			set { _correctID = value; }
 		}
 
+		/// <summary>
+		/// Setup the highlite child object and setup variable
+		/// </summary>
 		private void Start()
 		{
 			_isHighlighted = false;
 			SetupHighlite();
 		}
 
-		private void SetupHighlite()
-		{
-			_highliteObject = new GameObject("Highlight");
-			_highliteObject.transform.parent = transform;
-			_highliteObject.AddComponent<SpriteRenderer>().sprite = _highlightSprite;
-			//z is set to -1 to make sure the highlight is visible
-			_highliteObject.transform.localPosition = new Vector3(0, 0, -1);
-			_highliteObject.SetActive(false);
-		}
-
+		/// <summary>
+		/// Check what we should do when clicking the object
+		/// </summary>
 		private void OnMouseDown()
 		{
 			if (!_isHighlighted)
@@ -83,11 +79,15 @@ namespace Game.MudRoom.Puzzle
 			}
 		}
 
+		/// <summary>
+		/// Check whether the tile should be highlighted or swaped
+		/// if there already is a highlighted tile
+		/// </summary>
 		private void HighlightOrSwapTile()
 		{
-			if(Controller.ShouldSwap)
+			if (Controller.ShouldSwap)
 			{
-				Swap();
+				SwapTiles();
 			}
 			else
 			{
@@ -95,7 +95,10 @@ namespace Game.MudRoom.Puzzle
 			}
 		}
 
-		private void Swap()
+		/// <summary>
+		/// Swap selected tile and highlighted tile id's and positions
+		/// </summary>
+		private void SwapTiles()
 		{
 			PuzzleTile tileToSwap = Controller.HighlightedTile;
 			Vector3 tileToSwapPosition = tileToSwap.transform.position;
@@ -111,6 +114,9 @@ namespace Game.MudRoom.Puzzle
 			Controller.CheckForWin();
 		}
 
+		/// <summary>
+		/// Activate highlite child object
+		/// </summary>
 		private void HighlightTile()
 		{
 			_highliteObject.SetActive(true);
@@ -118,11 +124,27 @@ namespace Game.MudRoom.Puzzle
 			_isHighlighted = true;
 		}
 
+		/// <summary>
+		/// Deactivate highlite child object
+		/// </summary>
 		private void UnHighlightTile()
 		{
 			_highliteObject.SetActive(false);
 			_isHighlighted = false;
 			Controller.HighlightedTile = null;
+		}
+
+		/// <summary>
+		/// Add highlite child object to the tile
+		/// </summary>
+		private void SetupHighlite()
+		{
+			_highliteObject = new GameObject("Highlight");
+			_highliteObject.transform.parent = transform;
+			_highliteObject.AddComponent<SpriteRenderer>().sprite = _highlightSprite;
+			//z is set to -1 to make sure the highlight is visible
+			_highliteObject.transform.localPosition = new Vector3(0, 0, -1);
+			_highliteObject.SetActive(false);
 		}
 	}
 }
